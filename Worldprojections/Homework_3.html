@@ -12,47 +12,56 @@
     <p>I displayed nine different projections in QGIS, inclduing local projections (such as NAD 83 / North Carolina, which centers around North Carolina) and global projections (such as WGS84, which centers around the equator). I did this by changing the EPSG/ESRI projection in QGIS, exporting the map to the image editor (still in QGIS), and then adding the PNG image to Github and Visual Studio Code. </p>
     
     <h2><i>WGS84 Projection</i></h2>
-    <h3>Some observations</h3>
+    <h3 style="color:lightseagreen">Some observations</h3>
+    <p>The WGS84 projection is centered around the equator, so those areas have the least amount of distortion and are the most accurate to their true forms. As you move north/south from the equator, the countries increase in size (distortion), resulting in Greenland appearing to be roughly equal in size to Africa (which it isn't).</p>
     <a href=".//maps/Homework_3_4326.png">
     <img src=".//maps/Homework_3_4326.png" alt="WGS84" width='500px'>
     </a>
     <h2><i>Aitoff (World) Projection</i></h2>
-    <h3>Some observations</h3>
+    <h3 style="color:lightseagreen">Some observations</h3>
+    <p>The Aifoff (World) projection is a cyclindrical projection that centers around the Prime Meridian and the equator. Points closest to the intersection of the PM and the equator (0,0) have the least distortion. Distortion increases as you move farther from the (0,0) point, with the most disortion occurring at points farthest north/southeast and north/southwest. </p>
     <a href=".//maps/Homework_3_54043.png">
     <img src=".//maps/Homework_3_54043.png" alt="Aitoff (World)" width='500px'>
     </a>
     <h2><i>WGS84 / Pseudo-Mercator Projection</i></h2>
-    <h3>Some observations</h3>
+    <h3 style="color:lightseagreen">Some observations</h3>
+    <p>Similar to the WGS84 projection, the WGS84 / Pseudo-Mercator projection is also a conic projection that centers around the equator. Therefore, the most accurate depictions are at the equator, as indicated by the perfect circles. Distortion increases as you move north/south. </p>
     <a href=".//maps/Homework_3_3857.png">
     <img src=".//maps/Homework_3_3857.png" alt="WGS84 / Pseudo-Mercator" width='500px'>
     </a>
     <h2><i>Sphere_Winkle_I Projection</i></h2>
-    <h3>Some observations</h3>
+    <h3 style="color:lightseagreen">Some observations</h3>
+    <p>The Sphere_Winkle_I projectioon is also a cyclindrical projection that centers around the equator, leading the areas nearest the equator to have teh least amount of distortion. Distortion increases as you move north/south from the equator and east/west along it. </p>
     <a href=".//maps/Homework_3_53018.png">
     <img src=".//maps/Homework_3_53018.png" alt="Sphere_Winkle_I" width='500px'>
     </a>
     <h2><i>World_Cylindrical_Equal_Area Projection</i></h2>
-    <h3>Some observations</h3>
+    <h3 style="color:lightseagreen">Some observations</h3>
+    <p>The World_Cylindrical_Equal_Area projection is centered around the equator (like other cylindrical projections studied), but is more distorted because it preserves the distance between points (circles) on the map (it prioritizes equidistance). This leads the areas to the far north and south of the map to be particularly distorted as they're 3D but being forced to lay flat against the 2D surface and not morph in any way. </p>
     <a href=".//maps/Homework_3_54034.png">
     <img src=".//maps/Homework_3_54034.png" alt="World_Cylindrical_Equal_Area" width='500px'>
     </a>
     <h2><i>World_Equidistant_Conic Projection</i></h2>
-    <h3>Some observations</h3>
+    <h3 style="color:lightseagreen">Some observations</h3>
+    <p>This conic projection is centered around the North Pole, resulting in the most accurate areas on it being those closest to that point (farthest north). Distortion increases significantly as you move south on the globe, as seen by Antartica appearing as an almost completely circle on the outskirts of the map. </p>
     <a href=".//maps/Homework_3_54027.png">
     <img src=".//maps/Homework_3_54027.png" alt="World_Equidistant_Conic" width='500px'>
     </a>
     <h2><i>North_Pole_Azimuthal_Equidistant Projection</i></h2>
-    <h3>Some observations</h3>
+    <h3 style="color:lightseagreen">Some observations</h3>
+    <p>Similar to World_Equidistant_Conic projection above, the North_Pole_Azimuthal_Equidistant projection is a conic projection that centers are the North Pole. Unlike the projection above, the North_Pole_Azimuthal_Equidistant projection only "touches" the globe at the North Pole, leading points to the (extreme) south to be significantly more distorted than other, non-azimuthal projections. </p>
     <a href=".//maps/Homework_3_102016.png">
     <img src=".//maps/Homework_3_102016.png" alt="North_Pole_Azimuthal_Equidistant" width='500px'>
     </a>
     <h2><i>NAD27 Projection</i></h2>
-    <h3>Some observations</h3>
+    <h3 style="color:lightseagreen">Some observations</h3>
+    <p>The NAD27 projection is another cylindrical projection that centers around the equator, resulting in areas nearest the equator being the more accurate/least distorted. Similar projections include: WGS84 and WGS84 / Pseudo-Mercator. </p>
     <a href=".//maps/Homework_3_4267.png">
     <img src=".//maps/Homework_3_4267.png" alt="NAD27" width='500px'>
     </a>
     <h2><i>NAD83 / North Carolina Projection</i></h2>
-    <h3>Some observations</h3>
+    <h3 style="color:lightseagreen">Some observations</h3>
+    <p>The NAD83 / North Carolina projection is the only one used for this assingnment that uses a <u>state plane coordinate system</u>, which centers (for this projection) around the state of North Carolina. Because it's not meant to be used on a global scale, this projection is by far the most distorted of the ones I looked at to the extent that QGIS struggled to project the world countries shapefile. Interestingly enough, the projection is a conic projection, though I'll be honest when I say that I can't tell where North Carolina is on the map because of how poorly the data is projected.</p>
     <a href=".//maps/Homework_3_32119.png">
     <img src=".//maps/Homework_3_32119.png" alt="NAD83 / North Carolina" width='500px'>
     </a>
